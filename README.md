@@ -26,6 +26,7 @@ import foo from "./foo.yaml";
 ## Options
 
 - `match`: Regex to match the path against. Default: `/\.(yaml|yml)$/i`.
+- `opts`: Options passed to js-yaml's `load` function.
 
 ## Typescript
 

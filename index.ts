@@ -1,23 +1,30 @@
 import {readFile} from "node:fs/promises";
-import {load as loadYaml} from "js-yaml";
+import {load as loadYaml, DEFAULT_SCHEMA} from "js-yaml";
 import type {Plugin} from "vite";
+import type {LoadOptions} from "js-yaml";
 
 type ViteYamlPluginOpts = {
-  /** regex to match on the file path. Default: `/\.(yml|yaml)$/i` */
+  /** Regex to match on the file path. Default: `/\.(yml|yaml)$/i` */
   match?: RegExp;
+  /** Options passed to js-yaml's `load` function */
+  opts?: LoadOptions,
 }
 
 /** Vite plugin to import YAML files */
-type YamlPlugin = (opts?: ViteYamlPluginOpts) => Plugin;
-
-export const yamlPlugin: YamlPlugin = ({match = /\.(yml|yaml)$/i}: ViteYamlPluginOpts = {}): Plugin => ({
+export const yamlPlugin: (opts?: ViteYamlPluginOpts) => Plugin = ({match = /\.(yml|yaml)$/i, opts}: ViteYamlPluginOpts = {}): Plugin => ({
   name: "vite-yaml-plugin",
   enforce: "pre",
   async load(id) {
     const path = id.split("?")[0];
     if (!match.test(path)) return null;
+    const data = loadYaml(await readFile(path, "utf8"), {
+      filename: path,
+      onWarning: (err) => { console.warn(String(err)); },
+      schema: DEFAULT_SCHEMA,
+      ...opts,
+    });
     return {
-      code: `const data = ${JSON.stringify(loadYaml(await readFile(path, "utf8")))};\nexport default data;`,
+      code: `const data = ${JSON.stringify(data)};\nexport default data;`,
       map: {mappings: ""},
     };
   }
