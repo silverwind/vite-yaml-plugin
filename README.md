@@ -1,7 +1,7 @@
 # vite-yaml-plugin
 [![](https://img.shields.io/npm/v/vite-yaml-plugin.svg?style=flat)](https://www.npmjs.org/package/vite-yaml-plugin) [![](https://img.shields.io/npm/dm/vite-yaml-plugin.svg)](https://www.npmjs.org/package/vite-yaml-plugin) [![](https://packagephobia.com/badge?p=vite-yaml-plugin)](https://packagephobia.com/result?p=vite-yaml-plugin)
 
-Vite plugin to import YAMLfiles, with minimal dependencies
+Vite plugin to import YAML files, with minimal dependencies
 
 ## Usage
 
