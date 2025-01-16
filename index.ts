@@ -1,7 +1,6 @@
 import {readFile} from "node:fs/promises";
-import {load as loadYaml, DEFAULT_SCHEMA} from "js-yaml";
+import {load as loadYaml, DEFAULT_SCHEMA, type LoadOptions} from "js-yaml";
 import type {Plugin} from "vite";
-import type {LoadOptions} from "js-yaml";
 
 type ViteYamlPluginOpts = {
   /** Regex to match on the file path. Default: `/\.(yml|yaml)$/i` */
