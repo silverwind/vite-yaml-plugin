@@ -7,7 +7,7 @@ type ViteYamlPluginOpts = {
   match?: RegExp;
 }
 
-/** Vite plugin to import files as string */
+/** Vite plugin to import YAML files */
 type YamlPlugin = (opts?: ViteYamlPluginOpts) => Plugin;
 
 export const yamlPlugin: YamlPlugin = ({match = /\.(yml|yaml)$/i}: ViteYamlPluginOpts = {}): Plugin => ({
