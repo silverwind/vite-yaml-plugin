@@ -29,7 +29,19 @@ import foo from "./foo.yaml";
 
 ## Typescript
 
-Add these to your ambient type declarations:
+Add `vite-yaml-plugin/types` to your `types` in `tsconfig.json`:
+
+```json
+{
+  "compilerOptions": {
+    "types": [
+      "vite-yaml-plugin/types"
+    ]
+  }
+}
+```
+
+Alternatively, you can also add ambient type declarations:
 
 ```ts
 declare module "*.yaml" {
@@ -39,18 +51,6 @@ declare module "*.yaml" {
 declare module "*.yml" {
   const value: Record<string, any>;
   export default value;
-}
-```
-
-Alternatively, add this to `tsconfig.json`:
-
-```json
-{
-  "compilerOptions": {
-    "types": [
-      "vite-yaml-plugin/types"
-    ]
-  }
 }
 ```
 
