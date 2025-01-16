@@ -42,6 +42,18 @@ declare module "*.yml" {
 }
 ```
 
+Alternatively, add this to `tsconfig.json`:
+
+```json
+{
+  "compilerOptions": {
+    "types": [
+      "vite-yaml-plugin/types"
+    ]
+  }
+}
+```
+
 ## Related
 
 - [`vite-string-plugin`](https://github.com/silverwind/vite-string-plugin)
