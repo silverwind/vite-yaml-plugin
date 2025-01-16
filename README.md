@@ -41,3 +41,7 @@ declare module "*.yml" {
   export default value;
 }
 ```
+
+## Related
+
+- [`vite-string-plugin`](https://github.com/silverwind/vite-string-plugin)
