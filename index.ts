@@ -23,7 +23,7 @@ export const yamlPlugin: (opts?: ViteYamlPluginOpts) => Plugin = ({match = /\.(y
       ...opts,
     });
     return {
-      code: `const data = ${JSON.stringify(data)};\nexport default data;`,
+      code: `export default ${JSON.stringify(data)};\n`,
       map: {mappings: ""},
     };
   }
