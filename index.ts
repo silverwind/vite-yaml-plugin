@@ -1,7 +1,7 @@
 import {load as loadYaml, DEFAULT_SCHEMA, type LoadOptions} from "js-yaml";
 import type {Plugin} from "vite";
 
-type ViteYamlPluginOpts = {
+export type ViteYamlPluginOpts = {
   /** Regex to match on the file path. Default: `/\.(yml|yaml)$/i` */
   match?: RegExp;
   /** Options passed to js-yaml's `load` function */
