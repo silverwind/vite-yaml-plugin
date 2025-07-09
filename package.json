@@ -1,6 +1,6 @@
 {
   "name": "vite-yaml-plugin",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Vite plugin to import YAML files",
   "author": "silverwind <me@silverwind.io>",
   "repository": "silverwind/vite-yaml-plugin",
@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@types/js-yaml": "4.0.9",
-    "@types/node": "24.0.10",
+    "@types/node": "24.0.12",
     "eslint": "8.57.0",
     "eslint-config-silverwind": "101.2.1",
     "typescript": "5.8.3",
@@ -30,7 +30,7 @@
     "updates": "16.4.2",
     "versions": "12.1.3",
     "vite": "7.0.3",
-    "vite-config-silverwind": "5.3.0",
+    "vite-config-silverwind": "5.4.0",
     "vitest": "3.2.4",
     "vitest-config-silverwind": "10.2.0"
   }
