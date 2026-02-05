@@ -27,7 +27,7 @@
     "@types/js-yaml": "4.0.9",
     "@types/node": "25.1.0",
     "eslint": "9.39.2",
-    "eslint-config-silverwind": "118.0.1",
+    "eslint-config-silverwind": "120.1.2",
     "jest-extended": "7.0.0",
     "tsdown": "0.20.1",
     "tsdown-config-silverwind": "1.7.3",
