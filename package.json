@@ -1,6 +1,6 @@
 {
   "name": "vite-yaml-plugin",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Vite plugin to import YAML files",
   "author": "silverwind <me@silverwind.io>",
   "repository": "silverwind/vite-yaml-plugin",
