@@ -28,6 +28,8 @@ import foo from "./foo.yaml";
 - `match`: Regex to match the path against. Default: `/\.(yaml|yml)$/i`.
 - `opts`: Options passed to js-yaml's `load` function.
 
+Parsing follows the YAML 1.2 `CORE_SCHEMA` (js-yaml's default). To restore YAML 1.1 behavior (merge keys, timestamps, octal `0NNN`, etc.), pass `opts: {schema: YAML11_SCHEMA}` using the `YAML11_SCHEMA` export from `js-yaml`.
+
 ## Typescript
 
 Add `vite-yaml-plugin/types` to your `types` in `tsconfig.json`:

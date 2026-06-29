@@ -1,4 +1,4 @@
-import {load, DEFAULT_SCHEMA, type LoadOptions} from "js-yaml";
+import {load, type LoadOptions} from "js-yaml";
 import type {Plugin} from "vite";
 
 export type ViteYamlPluginOpts = {
@@ -18,8 +18,6 @@ export const yamlPlugin: (opts?: ViteYamlPluginOpts) => Plugin = ({match = /\.(y
     handler: (code, id) => ({
       code: `export default ${JSON.stringify(load(code, {
         filename: id.split("?")[0],
-        onWarning: (err) => { console.warn(String(err)); },
-        schema: DEFAULT_SCHEMA,
         ...opts,
       }))};\n`,
       map: {mappings: ""},
