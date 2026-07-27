@@ -28,16 +28,16 @@
     "vite": "*"
   },
   "dependencies": {
-    "js-yaml": "^5.2.1"
+    "js-yaml": "^5.2.2"
   },
   "devDependencies": {
     "@types/node": "26.1.1",
     "@typescript/native-preview": "7.0.0-dev.20260707.2",
-    "eslint": "10.7.0",
-    "eslint-config-silverwind": "141.1.0",
+    "eslint": "10.8.0",
+    "eslint-config-silverwind": "142.0.0",
     "jest-extended": "7.0.0",
-    "tsdown": "0.22.13",
-    "tsdown-config-silverwind": "4.0.2",
+    "tsdown": "0.22.14",
+    "tsdown-config-silverwind": "4.0.3",
     "typescript": "6.0.3",
     "typescript-config-silverwind": "20.0.1",
     "updates": "17.19.1",
@@ -48,5 +48,5 @@
     "vitest": "4.1.10",
     "vitest-config-silverwind": "11.4.0"
   },
-  "packageManager": "pnpm@11.16.0"
+  "packageManager": "pnpm@11.17.0"
 }
