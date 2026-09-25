@@ -3,7 +3,10 @@
   "version": "3.0.2",
   "description": "Vite plugin to import YAML files",
   "author": "silverwind <me@silverwind.io>",
-  "repository": "silverwind/vite-yaml-plugin",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silverwind/vite-yaml-plugin.git"
+  },
   "license": "BSD-2-Clause",
   "keywords": [
     "vite",

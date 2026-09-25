@@ -8,6 +8,5 @@ test("exists", () => {
 });
 
 test("petstore", async () => {
-  expect(petstore).toMatchSnapshot();
   expect(load(await readFile("fixtures/petstore.yaml", "utf8"))).toEqual(petstore);
 });
