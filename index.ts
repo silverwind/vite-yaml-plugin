@@ -5,11 +5,11 @@ export type ViteYamlPluginOpts = {
   /** Regex to match on the file path. Default: `/\.(yml|yaml)$/i` */
   match?: RegExp;
   /** Options passed to js-yaml's `load` function */
-  opts?: LoadOptions,
+  opts?: LoadOptions;
 };
 
 /** Vite plugin to import YAML files */
-export const yamlPlugin: (opts?: ViteYamlPluginOpts) => Plugin = ({match = /\.(yml|yaml)$/i, opts}: ViteYamlPluginOpts = {}): Plugin => ({
+export const yamlPlugin: (opts?: ViteYamlPluginOpts) => Plugin = ({match = /\.(yml|yaml)$/i, opts} = {}) => ({
   name: "vite-yaml-plugin",
   transform: {
     filter: {
