@@ -9,7 +9,7 @@ export type ViteYamlPluginOpts = {
 };
 
 /** Vite plugin to import YAML files */
-export const yamlPlugin: (opts?: ViteYamlPluginOpts) => Plugin = ({match = /\.(yml|yaml)$/i, opts} = {}) => ({
+export const yamlPlugin: (opts?: ViteYamlPluginOpts) => Plugin = ({match = /\.(yml|yaml)$/i, opts} = {}): Plugin => ({
   name: "vite-yaml-plugin",
   transform: {
     filter: {
