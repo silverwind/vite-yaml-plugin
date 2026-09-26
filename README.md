@@ -35,7 +35,7 @@ import foo from "./foo.yaml";
 
 Parsing follows the YAML 1.2 `CORE_SCHEMA` (js-yaml's default). To restore YAML 1.1 behavior (merge keys, timestamps, octal `0NNN`, etc.), pass `opts: {schema: YAML11_SCHEMA}` using the `YAML11_SCHEMA` export from `js-yaml`.
 
-## Typescript
+## TypeScript
 
 Add `vite-yaml-plugin/types` to your `types` in `tsconfig.json`:
 
