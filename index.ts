@@ -19,7 +19,7 @@ export const yamlPlugin: (opts?: ViteYamlPluginOpts) => Plugin = ({match = /\.(y
       code: `export default ${JSON.stringify(load(code, {
         filename: id.split("?")[0],
         ...opts,
-      }))};\n`,
+      }))};\n`.replaceAll(/(?<!\\)"__proto__":/g, '["__proto__"]:'),
       map: {mappings: ""},
     }),
   },

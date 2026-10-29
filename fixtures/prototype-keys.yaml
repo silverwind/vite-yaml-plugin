@@ -1,0 +1,12 @@
+__proto__:
+  inherited: true
+constructor: constructor-value
+prototype: prototype-value
+toString: string-value
+hasOwnProperty: own-value
+valueOf: value-value
+nested:
+  __proto__: nested-value
+items:
+  - __proto__: null
+'quoted"__proto__': '"__proto__":'
